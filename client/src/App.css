@@ -1,0 +1,126 @@
+/* Pixel Art Styling */
+.App {
+  text-align: center;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Pixel borders and effects */
+.pixel-border {
+  border-image: url("data:image/svg+xml,%3csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0 0h100v100H0z' fill='none' stroke='%23FF69B4' stroke-width='2'/%3e%3c/svg%3e") 2;
+}
+
+/* Pixel shadow effect */
+.pixel-shadow {
+  box-shadow: 
+    4px 4px 0px #FF69B4,
+    8px 8px 0px #E7D3FF,
+    12px 12px 0px #FFD6BA;
+}
+
+/* Pixel text effect */
+.pixel-text {
+  text-shadow: 
+    2px 2px 0px #FF69B4,
+    4px 4px 0px #E7D3FF;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFC0CB;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF69B4;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E7D3FF;
+}
+
+/* Pixel art button hover effects */
+.pixel-button {
+  position: relative;
+  transition: all 0.1s ease;
+}
+
+.pixel-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+}
+
+.pixel-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(255, 105, 180, 0.3);
+}
+
+/* Pixel art input styling */
+.pixel-input {
+  border: 2px solid #FFC0CB;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.pixel-input:focus {
+  border-color: #FF69B4;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.1);
+}
+
+/* Pixel art card hover effects */
+.pixel-card {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.pixel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.2);
+}
+
+/* Pixel art animations */
+@keyframes pixel-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pixel-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pixel-sparkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+@keyframes typewriter {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .pixel-shadow {
+    box-shadow: 
+      2px 2px 0px #FF69B4,
+      4px 4px 0px #E7D3FF;
+  }
+  
+  .pixel-text {
+    text-shadow: 
+      1px 1px 0px #FF69B4,
+      2px 2px 0px #E7D3FF;
+  }
+}
