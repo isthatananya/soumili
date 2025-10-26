@@ -9,7 +9,7 @@ const Puzzle = () => {
 
   // Create puzzle pieces with a secret message
   useEffect(() => {
-    const message = "You are amazing and deserve all the happiness in the world!";
+    const message = "Happy Birthday Soumili! You are amazing and deserve all the happiness in the world!";
     const pieces = message.split('').map((char, index) => ({
       id: index,
       char: char,
@@ -59,7 +59,6 @@ const Puzzle = () => {
   useEffect(() => {
     if (solvedPieces.length === puzzlePieces.length && puzzlePieces.length > 0) {
       setIsSolved(true);
-      setTimeout(() => setShowMessage(true), 1000);
     }
   }, [solvedPieces, puzzlePieces]);
 
@@ -147,7 +146,7 @@ const Puzzle = () => {
                 🎊 PUZZLE SOLVED! 🎊
               </h3>
               <p className="font-pixel-alt text-lg text-pixel-pink mb-4">
-                You are amazing and deserve all the happiness in the world!
+                Happy Birthday Soumili! You are amazing and deserve all the happiness in the world!
               </p>
               <motion.button
                 onClick={scrollToSurprises}

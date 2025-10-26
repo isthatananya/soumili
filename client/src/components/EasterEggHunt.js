@@ -37,6 +37,20 @@ const EasterEggHunt = () => {
     setEggs(newEggs);
   };
 
+  // End game
+  const endGame = useCallback(() => {
+    setGameOver(true);
+    setGameStarted(false);
+    
+    // Check for new high score
+    if (score > highScore) {
+      setHighScore(score);
+      localStorage.setItem('easterEggHighScore', score.toString());
+      setShowCelebration(true);
+      setTimeout(() => setShowCelebration(false), 3000);
+    }
+  }, [score, highScore]);
+
   // Start game
   const startGame = () => {
     setGameStarted(true);
@@ -58,20 +72,6 @@ const EasterEggHunt = () => {
       endGame();
     }
   }, [gameStarted, timeLeft, gameOver, endGame]);
-
-  // End game
-  const endGame = useCallback(() => {
-    setGameOver(true);
-    setGameStarted(false);
-    
-    // Check for new high score
-    if (score > highScore) {
-      setHighScore(score);
-      localStorage.setItem('easterEggHighScore', score.toString());
-      setShowCelebration(true);
-      setTimeout(() => setShowCelebration(false), 3000);
-    }
-  }, [score, highScore]);
 
   // Find egg
   const findEgg = (eggId) => {

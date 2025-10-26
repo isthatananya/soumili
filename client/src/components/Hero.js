@@ -106,8 +106,8 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
-          <h1 className="font-pixel text-4xl md:text-6xl lg:text-8xl text-pixel-hot-pink mb-4 drop-shadow-lg">
-            🎉 HAPPY BIRTHDAY! 🎉
+          <h1 className="font-pixel text-3xl md:text-5xl lg:text-7xl text-pixel-hot-pink mb-4 drop-shadow-lg pixel-text">
+            🎉 HAPPY BIRTHDAY<br/>SOUMILI! 🎉
           </h1>
           
           {showTypewriter && (
@@ -118,7 +118,7 @@ const Hero = () => {
               className="overflow-hidden whitespace-nowrap mx-auto"
             >
               <h2 className="font-pixel-alt text-2xl md:text-4xl text-pixel-pink">
-                Welcome to your pixelated surprise adventure!
+                Welcome to your pixelated surprise adventure, Soumili!
               </h2>
             </motion.div>
           )}
